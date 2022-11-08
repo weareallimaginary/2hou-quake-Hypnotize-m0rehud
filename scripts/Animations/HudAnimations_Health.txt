@@ -1,0 +1,140 @@
+//====================================================================================================================
+
+event HudHealthBonusPulse
+{
+	animate PlayerStatusHealthValue		FgColor								"165 255 195 255"	Linear 	0.0 	0.0
+	animate gradient					FgColor								"156 255 187 255" 	Linear 	0.0 	0.0
+	animate gradient2					FgColor								"148 254 178 255"  	Linear 	0.0 	0.0
+	animate gradient3					FgColor								"140 253 169 255"  	Linear 	0.0 	0.0
+	animate gradient4					FgColor								"131 253 160 255"	Linear 	0.0 	0.0
+	animate gradient5					FgColor								"91 255 133 255" 	Linear 	0.0 	0.0
+	animate gradient6					FgColor								"73 255 118 255"	Linear 	0.0 	0.0
+	animate gradient7					FgColor								"50 255 102 255"	Linear 	0.0 	0.0
+	animate gradient8					FgColor								"0 255 84 255"		Linear 	0.0 	0.0
+	
+	animate gradientlook				FgColor								"255 255 255 255"  	Linear 	0.0 	0.4
+	animate gradientlook				FgColor								"255 80 70 55"  	Linear 	0.4 	0.8
+	
+	
+	Animate HealthBG							Alpha 		"0"									Linear 	0.0 	0.0
+	Animate HealthBuff							Alpha 		"255"								Linear 	0.0 	0.0
+
+
+	Animate crosshair							Alpha 		"0"									Linear 	0.0 	0.0
+	Animate crosshairlow							Alpha 		"0"									Linear 	0.0 	0.0
+	Animate crosshairbuff							Alpha 		"255"									Linear 	0.0 	0.0
+	
+	Animate PlayerHealthIcon							Alpha 		"0"									Linear 	0.0 	0.0
+	Animate PlayerHealthIconlow							Alpha 		"0"									Linear 	0.0 	0.0
+	Animate PlayerHealthIconbuff							Alpha 		"255"									Linear 	0.0 	0.0
+	
+
+	RunEvent HudHealthBonusPulseLoop			2.0
+}
+
+event HudHealthBonusPulseStop
+{
+	StopEvent HudHealthBonusPulse 				0.0
+	StopEvent HudHealthBonusPulseLoop			0.0
+
+	animate PlayerStatusHealthValue		FgColor								"183 207 200 255"	Linear 	0.0 	0.0
+	animate gradient					FgColor								"153 187 209 255"	Linear 	0.0 	0.0
+	animate gradient2					FgColor								"128 180 217 255"	Linear 	0.0 	0.0
+	animate gradient3					FgColor								"103 172 225 255"	Linear 	0.0 	0.0
+	animate gradient4					FgColor								"77 164 233 255" 	Linear 	0.0 	0.0
+	animate gradient5					FgColor								"49 154 241 255" 	Linear 	0.0 	0.0
+	animate gradient6					FgColor								"10 144 247 255" 	Linear 	0.0 	0.0
+	animate gradient7					FgColor								"0 133 252 255"  	Linear 	0.0 	0.0
+	animate gradient8					FgColor								"0 120 255 255"  	Linear 	0.0 	0.0
+	
+	animate gradientlook				FgColor								"255 255 255 255"  	Linear 	0.0 	0.4
+
+	animate gradientlook				FgColor								"255 255 255 50"  	Linear 	0.7 	0.8
+
+	Animate HealthBG							Alpha 		"255"								Linear 	0.0 	0.0
+	Animate HealthBuff							Alpha 		"0"									Linear 	0.0 	0.0
+	
+	Animate crosshair							Alpha 		"255"									Linear 	0.0 	0.0
+	Animate crosshairlow							Alpha 		"0"									Linear 	0.0 	0.0
+	Animate crosshairbuff							Alpha 		"0"									Linear 	0.0 	0.0
+	
+	Animate PlayerHealthIcon							Alpha 		"255"									Linear 	0.0 	0.0
+	Animate PlayerHealthIconlow							Alpha 		"0"									Linear 	0.0 	0.0
+	Animate PlayerHealthIconbuff							Alpha 		"0"									Linear 	0.0 	0.0
+
+}
+
+//====================================================================================================================
+
+event HudHealthDyingPulse
+{
+	animate PlayerStatusHealthValue		FgColor								"255 149 149 255"	Linear 	0.0 	0.0
+	animate gradient					FgColor								"255 136 134 255"	Linear 	0.0 	0.0
+	animate gradient2					FgColor								"255 123 119 255"	Linear 	0.0 	0.0
+	animate gradient3					FgColor								"255 109 104 255"	Linear 	0.0 	0.0
+	animate gradient4					FgColor								"255 95 87 255" 	Linear 	0.0 	0.0
+	animate gradient5					FgColor								"255 80 70 255" 	Linear 	0.0 	0.0
+	animate gradient6					FgColor								"255 62 52 255" 	Linear 	0.0 	0.0
+	animate gradient7					FgColor								"255 41 31 255"  	Linear 	0.0 	0.0
+	animate gradient8					FgColor								"255 0 0 255"  		Linear 	0.0 	0.0
+	
+	animate gradientlook				FgColor								"255 255 255 255"  	accel 	0.25 	0.4
+
+	animate gradientlook				FgColor								"255 80 70 55"  	accel 	0.7 	0.8
+
+
+	Animate HealthBG							Alpha 		"255"								Linear 	0.0 	0.0
+	Animate HealthBuff							Alpha 		"0"									Linear 	0.0 	0.0
+
+	Animate crosshair							Alpha 		"0"									Linear 	0.0 	0.0
+	Animate crosshairlow							Alpha 		"255"									Linear 	0.0 	0.0
+	Animate crosshairbuff							Alpha 		"0"									Linear 	0.0 	0.0
+
+	Animate PlayerHealthIcon							Alpha 		"0"									Linear 	0.0 	0.0
+	Animate PlayerHealthIconlow							Alpha 		"255"									Linear 	0.0 	0.0
+	Animate PlayerHealthIconbuff							Alpha 		"0"									Linear 	0.0 	0.0
+
+	RunEvent HudHealthDyingPulseLoop			2.0	
+}
+
+event HudHealthDyingPulseStop
+{
+	StopEvent HudHealthDyingPulse				0.0
+	StopEvent HudHealthDyingPulseLoop 			0.0
+
+	animate PlayerStatusHealthValue		FgColor								"183 207 200 255"	Linear 	0.0 	0.0
+	animate gradient					FgColor								"153 187 209 255"	Linear 	0.0 	0.0
+	animate gradient2					FgColor								"128 180 217 255"	Linear 	0.0 	0.0
+	animate gradient3					FgColor								"103 172 225 255"	Linear 	0.0 	0.0
+	animate gradient4					FgColor								"77 164 233 255" 	Linear 	0.0 	0.0
+	animate gradient5					FgColor								"49 154 241 255" 	Linear 	0.0 	0.0
+	animate gradient6					FgColor								"10 144 247 255" 	Linear 	0.0 	0.0
+	animate gradient7					FgColor								"0 133 252 255"  	Linear 	0.0 	0.0
+	animate gradient8					FgColor								"0 120 255 255"  	Linear 	0.0 	0.0
+	
+	animate gradientlook				FgColor								"255 255 255 255"  	Linear 	0.0 	0.0
+	animate gradientlook				FgColor								"255 255 255 50"  	Linear 	0.1 	0.0
+	animate gradientlook				FgColor								"255 255 255 255"  	Linear 	0.0 	0.0
+	animate gradientlook				FgColor								"255 255 255 50"  	Linear 	0.7 	0.0
+
+
+	Animate HealthBG							Alpha 		"255"								Linear 	0.0 	0.0
+	Animate HealthBuff							Alpha 		"0"									Linear 	0.0 	0.0
+	
+	Animate crosshair							Alpha 		"255"									Linear 	0.0 	0.0
+	Animate crosshairlow							Alpha 		"0"									Linear 	0.0 	0.0
+	Animate crosshairbuff							Alpha 		"0"									Linear 	0.0 	0.0
+	
+	Animate PlayerHealthIcon							Alpha 		"255"									Linear 	0.0 	0.0
+	Animate PlayerHealthIconlow							Alpha 		"0"									Linear 	0.0 	0.0
+	Animate PlayerHealthIconbuff							Alpha 		"0"									Linear 	0.0 	0.0
+	
+}
+
+//====================================================================================================================
+
+event DamagedPlayer
+{
+    //	Animate "CustomCrosshair"		FgColor     "255 0 0 255"			Linear 	0.0 	0.00001 	// Crosshair color on hit
+    //	Animate "CustomCrosshair"		FgColor     "255 255 255 255"		Linear 	0.10 	0.10001 	// Should match your crosshair color in crosshair.res
+}
